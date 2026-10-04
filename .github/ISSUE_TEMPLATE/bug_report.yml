@@ -1,0 +1,37 @@
+name: Bug report
+description: Something behaves differently from the documentation
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If this is a **security issue**, do not file it here. Use the private link on the issue chooser page instead. Remove account IDs, ARNs and secrets from anything you paste.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Include what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: The command or configuration (with secrets removed) and the relevant output.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "v1.2.0, or a commit SHA"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Terraform 1.15, AWS provider 6.x, Python 3.12, commercial or GovCloud"
+    validations:
+      required: true
